@@ -2,6 +2,6 @@
 {
     public interface IGenerateCommandWindowFactory
     {
-        IViewWithDataContext Create();
+        IWindow Create();
     }
 }

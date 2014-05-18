@@ -10,14 +10,12 @@ using Olf.MvvmGenerator.Foundation.Templates;
 
 namespace Olf.MvvmGenerator.Core.Services.Generators
 {
-    public class ModelGenerator : IModelGenerator
+    public class ModelGenerator : BaseGenerator, IModelGenerator
     {
-        private readonly IVisualStudioIde visualStudioIde;
-        private CsFileInfoDirector csFileInfoDirector = new CsFileInfoDirector();
-
         public ModelGenerator(IVisualStudioIde visualStudioIde)
+            : base(visualStudioIde)
         {
-            this.visualStudioIde = visualStudioIde;
+            
         }
 
         public void Run(ParsedModelCommand parsedModelCommand)
@@ -51,25 +49,5 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
             }
         }
 
-        protected virtual CsFileInfo CreateCsFileInfo(ICsFileInfoBuilder csFileInfoBuilder)
-        {
-            csFileInfoDirector.Build(csFileInfoBuilder);
-            return csFileInfoBuilder.GetResult();
-        }
-
-        protected virtual FilePreview CreateFilePreview(CsFileInfo csFileInfo, IFileTemplate fileTemplate)
-        {
-            string transformText = fileTemplate.TransformText();
-
-            FilePreview codeFilePreview = new FilePreview
-            {
-                FilePath = csFileInfo.FilePath,
-                FileName = csFileInfo.FileName, 
-                Content = transformText,
-                ProjectName = csFileInfo.ProjectName
-            };
-            
-            return codeFilePreview;
-        }
     }
 }

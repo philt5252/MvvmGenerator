@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Olf.MvvmGenerator.Core.Templates
+namespace Olf.MvvmGenerator.Core.Templates.ViewModels
 {
     using Olf.MvvmGenerator.Foundation.Models;
     using System;
@@ -16,9 +16,9 @@ namespace Olf.MvvmGenerator.Core.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
-    public partial class ModelTemplate : ModelTemplateBase
+    public partial class ViewModelTemplate : ViewModelTemplateBase
     {
         /// <summary>
         /// Create the template output
@@ -27,7 +27,7 @@ namespace Olf.MvvmGenerator.Core.Templates
         {
             this.Write("\r\n");
             
-            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
  foreach(string u in csFileInfo.Usings)
     {
         WriteLine("using " + u + ";");
@@ -38,21 +38,21 @@ namespace Olf.MvvmGenerator.Core.Templates
             #line hidden
             this.Write("\r\nnamespace ");
             
-            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
  WriteLine(csFileInfo.Namespace); 
             
             #line default
             #line hidden
             this.Write("{\r\n    public class ");
             
-            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
  WriteLine(csFileInfo.ObjectDeclaration); 
             
             #line default
             #line hidden
             this.Write("    {\r\n");
             
-            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
 
     foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
     {
@@ -62,21 +62,21 @@ namespace Olf.MvvmGenerator.Core.Templates
             #line hidden
             this.Write("        public ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
         Write(propertyDetails.PropertyType.Name); 
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
         Write(propertyDetails.PropertyName);
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ModelTemplate.tt"
+            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelTemplate.tt"
   }   
             
             #line default
@@ -93,7 +93,7 @@ namespace Olf.MvvmGenerator.Core.Templates
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
-    public class ModelTemplateBase
+    public class ViewModelTemplateBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

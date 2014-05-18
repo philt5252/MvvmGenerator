@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Olf.MvvmGenerator.Core.Templates
+namespace Olf.MvvmGenerator.Core.Templates.ViewModels
 {
     using Olf.MvvmGenerator.Foundation.Models;
     using System;
@@ -16,7 +16,7 @@ namespace Olf.MvvmGenerator.Core.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class ViewModelFactoryInterfaceTemplate : ViewModelFactoryInterfaceTemplateBase
     {
@@ -27,7 +27,7 @@ namespace Olf.MvvmGenerator.Core.Templates
         {
             this.Write("\r\n");
             
-            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     foreach(string u in csFileInfo.Usings)
     {
         WriteLine("using " + u + ";");
@@ -38,21 +38,21 @@ namespace Olf.MvvmGenerator.Core.Templates
             #line hidden
             this.Write("\r\nnamespace ");
             
-            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     WriteLine(csFileInfo.Namespace); 
             
             #line default
             #line hidden
             this.Write("{\r\n    public interface ");
             
-            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     WriteLine(csFileInfo.ObjectDeclaration); 
             
             #line default
             #line hidden
             this.Write("    {\r\n");
             
-            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
 
     foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
     {
@@ -62,28 +62,28 @@ namespace Olf.MvvmGenerator.Core.Templates
             #line hidden
             this.Write("        ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
         Write(propertyDetails.PropertyType.Name); 
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
         Write(propertyDetails.PropertyName);
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     }   
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 20 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModelFactoryInterfaceTemplate.tt"
+            #line 20 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt"
     Write(interfaceObjectName);
             
             #line default

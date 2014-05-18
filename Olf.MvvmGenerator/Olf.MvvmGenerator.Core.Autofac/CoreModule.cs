@@ -29,10 +29,14 @@ namespace Olf.MvvmGenerator.Core.Autofac
             builder.RegisterType<CommandRunnerManager>().As<ICommandRunnerManager>().SingleInstance();
 
             builder.RegisterType<ModelCommandRunner>().As<ICommandRunner>().SingleInstance();
+            builder.RegisterType<ViewModelCommandRunner>().As<ICommandRunner>().SingleInstance();
 
             builder.RegisterType<ModelGenerator>().As<IModelGenerator>().SingleInstance();
+            builder.RegisterType<ViewModelGenerator>().As<IViewModelGenerator>().SingleInstance();
 
             builder.RegisterType<ModelCommandParser>().As<IModelCommandParser>().SingleInstance();
+            builder.RegisterType<ViewModelCommandParser>().As<IViewModelCommandParser>().SingleInstance();
+            builder.RegisterType<ScaffoldCommandParser>().As<IScaffoldCommandParser>().SingleInstance();
         }
     }
 }

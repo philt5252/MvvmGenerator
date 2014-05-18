@@ -33,6 +33,8 @@ namespace Olf.MvvmGenerator.Core.Autofac
             builder.RegisterType<ModelGenerator>().As<IModelGenerator>().SingleInstance();
 
             builder.RegisterType<ModelCommandParser>().As<IModelCommandParser>().SingleInstance();
+            builder.RegisterType<ViewModelCommandParser>().As<IViewModelCommandParser>().SingleInstance();
+            builder.RegisterType<ScaffoldCommandParser>().As<IScaffoldCommandParser>().SingleInstance();
         }
     }
 }

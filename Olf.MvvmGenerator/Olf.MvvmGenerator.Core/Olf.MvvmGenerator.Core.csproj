@@ -72,6 +72,7 @@
     <Compile Include="Services\CsFileInfoBuilders\ViewModelInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\Generators\BaseGenerator.cs" />
     <Compile Include="Services\Generators\ModelGenerator.cs" />
+    <Compile Include="Services\Generators\ScaffoldGenerator.cs" />
     <Compile Include="Services\Generators\ViewModelGenerator.cs" />
     <Compile Include="Services\Parsers\ModelCommandParser.cs" />
     <Compile Include="Services\Parsers\PropertyDetailsParser.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Services\Parsers\ViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\CommandRunnerManager.cs" />
     <Compile Include="Services\Runners\ModelCommandRunner.cs" />
+    <Compile Include="Services\Runners\ScaffoldCommandRunner.cs" />
     <Compile Include="Services\Runners\ViewModelCommandRunner.cs" />
     <Compile Include="Templates\Models\ModelFactoryInterfaceTemplate1.cs">
       <AutoGen>True</AutoGen>

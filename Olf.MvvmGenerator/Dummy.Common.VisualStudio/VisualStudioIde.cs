@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using Olf.Common.VisualStudio;
 
 namespace Dummy.Common.VisualStudio
@@ -26,7 +27,7 @@ namespace Dummy.Common.VisualStudio
         {
             Window window = new Window();
             Grid grid = new Grid();
-            grid.Children.Add(new TextBox { Text = transformText });
+            grid.Children.Add(new TextBox { Text = transformText, FontFamily=new FontFamily("Consolas") });
 
             window.Content = grid;
 

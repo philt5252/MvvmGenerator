@@ -7,9 +7,9 @@
     <Grid>
 
         <StackPanel>
-            <TextBox TextWrapping="Wrap" Height ="Auto" Text="{Binding Command}" HorizontalAlignment="Left" 
+            <TextBox AcceptsReturn="true" TextWrapping="Wrap" Height ="Auto" Text="{Binding Command}" HorizontalAlignment="Left" 
                      Margin="82,10,0,0" VerticalAlignment="Top" Width="329"/>
-            <Button Command="{Binding GenerateCommand}" Content="Generate" HorizontalAlignment="Left" 
+            <Button  IsDefault="True" Command="{Binding GenerateCommand}" Content="Generate" HorizontalAlignment="Left" 
                     Margin="337,6,0,0" VerticalAlignment="Top" Width="75"/> 
         </StackPanel>
         <Label Content="Command: " HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" 

@@ -63,6 +63,7 @@
     <Compile Include="Services\Generators\ModelGenerator.cs" />
     <Compile Include="Services\Parsers\ModelCommandParser.cs" />
     <Compile Include="Services\Parsers\PropertyDetailsParser.cs" />
+    <Compile Include="Services\Parsers\ScaffoldCommandParser.cs" />
     <Compile Include="Services\Parsers\ViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\CommandRunnerManager.cs" />
     <Compile Include="Services\Runners\ModelCommandRunner.cs" />

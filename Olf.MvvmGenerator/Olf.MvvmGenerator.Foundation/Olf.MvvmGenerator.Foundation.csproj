@@ -44,12 +44,14 @@
     <Compile Include="Factories\ViewModels\IGenerateCommandViewModelFactory.cs" />
     <Compile Include="Models\ParsedCommandWithProperties.cs" />
     <Compile Include="Models\ParsedModelCommand.cs" />
+    <Compile Include="Models\ParsedScaffoldCommand.cs" />
     <Compile Include="Models\ParsedViewModelCommand.cs" />
     <Compile Include="Models\PropertyDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Generators\CsFileInfo.cs" />
     <Compile Include="Services\Generators\IModelGenerator.cs" />
     <Compile Include="Services\Parsers\IModelCommandParser.cs" />
+    <Compile Include="Services\Parsers\IScaffoldCommandParser.cs" />
     <Compile Include="Services\Parsers\IViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\ICommandRunner.cs" />
     <Compile Include="Services\Runners\ICommandRunnerManager.cs" />

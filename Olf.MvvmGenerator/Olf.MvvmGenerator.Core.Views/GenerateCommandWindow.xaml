@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="98.508" Width="429.851">
+             mc:Ignorable="d" Height="98.508" Width="429.851"
+            FocusManager.FocusedElement="{Binding ElementName=commandTbx}">
     <Grid>
 
         <StackPanel>
             <TextBox AcceptsReturn="false" TextWrapping="Wrap" Height ="Auto" Text="{Binding Command, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" 
-                     Margin="82,10,0,0" VerticalAlignment="Top" Width="329"/>
+                     Margin="82,10,0,0" VerticalAlignment="Top" Width="329" Name="commandTbx"/>
             <Button  IsDefault="True" Command="{Binding GenerateCommand}" Content="Generate" HorizontalAlignment="Left" 
                     Margin="337,6,0,0" VerticalAlignment="Top" Width="75"/> 
         </StackPanel>

@@ -15,7 +15,7 @@ namespace Dummy.Common.VisualStudio
 
         public string[] GetProjectNames()
         {
-            return new string[] { "dumb.Core", "dumb.Foundation" };
+            return new string[] { "dumb.Core", "dumb.Foundation", "dumb.Core.Views", "dumb.Foundation.Views" };
         }
 
         public string GetDefaultNamespaceForProject(string projectName)

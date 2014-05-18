@@ -9,71 +9,24 @@
 // ------------------------------------------------------------------------------
 namespace Olf.MvvmGenerator.Core.Templates.Scaffold
 {
-    using Olf.MvvmGenerator.Foundation.Models;
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
+    #line 1 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
-    public partial class ScaffoldViewFactoryTemplate : ScaffoldViewFactoryTemplateBase
+    public partial class ScaffoldListViewXamlTemplate : ScaffoldListViewXamlTemplateBase
     {
         /// <summary>
         /// Create the template output
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("\r\n");
-            
-            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    foreach(string u in csFileInfo.Usings)
-    {
-        WriteLine("using " + u + ";");
-    }
-
-            
-            #line default
-            #line hidden
-            this.Write("\r\nnamespace ");
-            
-            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    WriteLine(csFileInfo.Namespace); 
-            
-            #line default
-            #line hidden
-            this.Write("{\r\n    public class ");
-            
-            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    WriteLine(csFileInfo.ObjectDeclaration); 
-            
-            #line default
-            #line hidden
-            this.Write("    {\r\n        private Func<");
-            
-            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    Write(viewName);
-            
-            #line default
-            #line hidden
-            this.Write("> createViewFunc;\r\n\r\n        public ");
-            
-            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    Write(csFileInfo.ObjectName); 
-            
-            #line default
-            #line hidden
-            this.Write("(Func<");
-            
-            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryTemplate.tt"
-    Write(viewName);
-            
-            #line default
-            #line hidden
-            this.Write("> createViewFunc)\r\n        {\r\n            this.createViewFunc = createViewFunc;\r\n" +
-                    "        }\r\n\r\n        public IViewWithDataContext Create()\r\n        {\r\n          " +
-                    "  return createViewFunc();\r\n        }\r\n        \r\n    }\r\n}\r\n\r\n\r\n\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -85,7 +38,7 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
-    public class ScaffoldViewFactoryTemplateBase
+    public class ScaffoldListViewXamlTemplateBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

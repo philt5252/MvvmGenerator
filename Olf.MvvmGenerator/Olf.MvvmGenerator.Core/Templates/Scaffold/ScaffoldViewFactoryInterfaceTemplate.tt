@@ -1,5 +1,16 @@
 ﻿<#@ template language="C#" #>
-<#@ assembly name="System.Core" #>
-<#@ import namespace="System.Linq" #>
-<#@ import namespace="System.Text" #>
-<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Olf.MvvmGenerator.Foundation.Models" #>
+
+<#    foreach(string u in csFileInfo.Usings)
+    {
+        WriteLine("using " + u + ";");
+    }
+#>
+
+namespace <#    WriteLine(csFileInfo.Namespace); #>
+{
+    public interface <#    WriteLine(csFileInfo.ObjectDeclaration); #>
+    {
+        IViewWithDataContext Create();
+    }
+}

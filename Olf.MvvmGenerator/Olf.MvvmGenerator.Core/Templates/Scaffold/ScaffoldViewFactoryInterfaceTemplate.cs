@@ -9,9 +9,7 @@
 // ------------------------------------------------------------------------------
 namespace Olf.MvvmGenerator.Core.Templates.Scaffold
 {
-    using System.Linq;
-    using System.Text;
-    using System.Collections.Generic;
+    using Olf.MvvmGenerator.Foundation.Models;
     using System;
     
     /// <summary>
@@ -27,6 +25,32 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
         /// </summary>
         public virtual string TransformText()
         {
+            this.Write("\r\n");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryInterfaceTemplate.tt"
+    foreach(string u in csFileInfo.Usings)
+    {
+        WriteLine("using " + u + ";");
+    }
+
+            
+            #line default
+            #line hidden
+            this.Write("\r\nnamespace ");
+            
+            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryInterfaceTemplate.tt"
+    WriteLine(csFileInfo.Namespace); 
+            
+            #line default
+            #line hidden
+            this.Write("{\r\n    public interface ");
+            
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewFactoryInterfaceTemplate.tt"
+    WriteLine(csFileInfo.ObjectDeclaration); 
+            
+            #line default
+            #line hidden
+            this.Write("    {\r\n        IViewWithDataContext Create();\r\n    }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

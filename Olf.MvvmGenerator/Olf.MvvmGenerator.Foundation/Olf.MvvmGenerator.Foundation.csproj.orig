@@ -42,7 +42,10 @@
   <ItemGroup>
     <Compile Include="Controllers\IAppController.cs" />
     <Compile Include="Factories\ViewModels\IGenerateCommandViewModelFactory.cs" />
+<<<<<<< Updated upstream
+=======
     <Compile Include="Models\FilePreview.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Models\ParsedCommandWithProperties.cs" />
     <Compile Include="Models\ParsedModelCommand.cs" />
     <Compile Include="Models\ParsedScaffoldCommand.cs" />

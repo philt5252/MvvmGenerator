@@ -28,8 +28,11 @@ namespace Olf.MvvmGenerator.Core.ViewModels
         public GenerateCommandViewModel(ICommandRunnerManager commandRunnerManager)
         {
             this.commandRunnerManager = commandRunnerManager;
+
             generateCommand = new DelegateCommand(ExecuteGenerateCommand, CanExecuteGenerateCommand);
             GenerateCommand = generateCommand;
+
+            Command = "";
         }
 
         private bool CanExecuteGenerateCommand()

@@ -60,6 +60,12 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Factories\ViewModels\GenerateCommandViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\CsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\CsFileInfoDirector.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ModelCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ModelFactoryCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ModelFactoryInterfaceCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ModelInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\Generators\ModelGenerator.cs" />
     <Compile Include="Services\Parsers\ModelCommandParser.cs" />
     <Compile Include="Services\Parsers\PropertyDetailsParser.cs" />
@@ -78,6 +84,10 @@
     <Compile Include="ViewModels\GenerateCommandViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Olf.Common.VisualStudio\Olf.Common.VisualStudio.csproj">
+      <Project>{4E1B696A-5C33-4401-B33E-6AB71FC47E26}</Project>
+      <Name>Olf.Common.VisualStudio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Olf.MvvmGenerator.Foundation.Views\Olf.MvvmGenerator.Foundation.Views.csproj">
       <Project>{1C43CF8A-048E-47DF-9463-209D186CFF80}</Project>
       <Name>Olf.MvvmGenerator.Foundation.Views</Name>

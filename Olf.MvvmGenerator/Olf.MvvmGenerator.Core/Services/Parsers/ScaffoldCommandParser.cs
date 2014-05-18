@@ -15,7 +15,7 @@ namespace Olf.MvvmGenerator.Core.Services.Parsers
         }
         public bool CheckValidCommand(string command)
         {
-            if (command.StartsWith("Scaffold"))
+            if (!command.StartsWith("scaffold"))
             {
                 return false;
             }

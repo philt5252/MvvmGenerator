@@ -15,7 +15,7 @@ namespace Olf.MvvmGenerator.Core.Services.Parsers
         }
         public bool CheckValidCommand(string command)
         {
-            if (command.StartsWith("Model"))
+            if (!command.StartsWith("model"))
             {
                 return false;
             }

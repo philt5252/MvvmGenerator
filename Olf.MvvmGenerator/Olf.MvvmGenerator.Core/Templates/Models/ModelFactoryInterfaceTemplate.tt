@@ -1,0 +1,22 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Olf.MvvmGenerator.Foundation.Models" #>
+
+<#    foreach(string u in csFileInfo.Usings)
+    {
+        WriteLine("using " + u + ";");
+    }
+#>
+
+namespace <#    WriteLine(csFileInfo.Namespace); #>
+{
+    public interface <#    WriteLine(csFileInfo.ObjectDeclaration); #>
+    {
+<#
+    foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+    {
+#>
+        <#        Write(propertyDetails.PropertyType.Name); #> <#        Write(propertyDetails.PropertyName);#> { get; set; }
+<#    }   #>
+        <#    Write(interfaceObjectName);#> Create();
+    }
+}

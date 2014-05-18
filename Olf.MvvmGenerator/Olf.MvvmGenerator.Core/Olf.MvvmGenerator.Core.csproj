@@ -73,14 +73,54 @@
     <Compile Include="Services\Parsers\ViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\CommandRunnerManager.cs" />
     <Compile Include="Services\Runners\ModelCommandRunner.cs" />
-    <Compile Include="Templates\ModelFactoryInterfaceTemplate.cs" />
-    <Compile Include="Templates\ModelFactoryInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\ModelFactoryTemplate.cs" />
-    <Compile Include="Templates\ModelFactoryTemplatePartial.cs" />
-    <Compile Include="Templates\ModelInterfaceTemplate.cs" />
-    <Compile Include="Templates\ModelInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\ModelTemplate.cs" />
-    <Compile Include="Templates\ModelTemplatePartial.cs" />
+    <Compile Include="Templates\ModelFactoryInterfaceTemplate1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Partials\ViewModelFactoryTemplatePartial.cs" />
+    <Compile Include="Templates\Partials\ViewModelFactoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Partials\ModelFactoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ModelFactoryTemplate1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFactoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Partials\ModelFactoryTemplatePartial.cs" />
+    <Compile Include="Templates\ModelInterfaceTemplate1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Partials\ModelInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ModelTemplate1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Partials\ModelTemplatePartial.cs" />
+    <Compile Include="Templates\Partials\ViewModelInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Partials\ViewModelTemplatePartial.cs" />
+    <Compile Include="Templates\ViewModelFactoryInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModelFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewModelFactoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModelFactoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewModelInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModelInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewModelTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModelTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\GenerateCommandViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,9 +137,43 @@
       <Name>Olf.MvvmGenerator.Foundation</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Templates\ModelFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModelFactoryInterfaceTemplate1.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ModelFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModelFactoryTemplate1.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ModelInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModelInterfaceTemplate1.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ModelTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModelTemplate1.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewModelFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelFactoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewModelFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelFactoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewModelInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewModelTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

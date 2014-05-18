@@ -66,6 +66,10 @@
     <Compile Include="Services\CsFileInfoBuilders\ModelFactoryCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ModelFactoryInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ModelInterfaceCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewModelCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewModelFactoryCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewModelFactoryInterfaceCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewModelInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\Generators\ModelGenerator.cs" />
     <Compile Include="Services\Parsers\ModelCommandParser.cs" />
     <Compile Include="Services\Parsers\PropertyDetailsParser.cs" />

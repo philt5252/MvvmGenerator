@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Olf.MvvmGenerator.Core.Services.Generators;
+﻿using Olf.MvvmGenerator.Core.Services.Generators;
 using Olf.MvvmGenerator.Foundation.Templates;
 
-namespace Olf.MvvmGenerator.Core.Templates
+namespace Olf.MvvmGenerator.Core.Templates.Models
 {
     public partial class ModelInterfaceTemplate : IFileTemplate
     {

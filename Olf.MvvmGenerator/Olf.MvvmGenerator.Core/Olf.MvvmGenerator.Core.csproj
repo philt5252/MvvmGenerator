@@ -85,29 +85,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelFactoryInterfaceTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\Partials\ViewModels\ViewModelFactoryTemplatePartial.cs" />
-    <Compile Include="Templates\Partials\ViewModels\ViewModelFactoryInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\Partials\Models\ModelFactoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryTemplatePartial.cs" />
+    <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Models\Partials\ModelFactoryInterfaceTemplatePartial.cs" />
     <Compile Include="Templates\Models\ModelFactoryTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelFactoryTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\Partials\Models\ModelFactoryTemplatePartial.cs" />
+    <Compile Include="Templates\Models\Partials\ModelFactoryTemplatePartial.cs" />
     <Compile Include="Templates\Models\ModelInterfaceTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelInterfaceTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\Partials\Models\ModelInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\Models\Partials\ModelInterfaceTemplatePartial.cs" />
     <Compile Include="Templates\Models\ModelTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\Partials\Models\ModelTemplatePartial.cs" />
-    <Compile Include="Templates\Partials\ViewModels\ViewModelInterfaceTemplatePartial.cs" />
-    <Compile Include="Templates\Partials\ViewModels\ViewModelTemplatePartial.cs" />
+    <Compile Include="Templates\Models\Partials\ModelTemplatePartial.cs" />
+    <Compile Include="Templates\ViewModels\Partials\ViewModelInterfaceTemplatePartial.cs" />
+    <Compile Include="Templates\ViewModels\Partials\ViewModelTemplatePartial.cs" />
     <Compile Include="Templates\ViewModels\ViewModelFactoryInterfaceTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +182,7 @@
       <LastGenOutput>ViewModelTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

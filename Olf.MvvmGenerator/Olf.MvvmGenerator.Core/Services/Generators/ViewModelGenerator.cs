@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using Olf.Common.VisualStudio;
 using Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders;
-using Olf.MvvmGenerator.Core.Templates;
+using Olf.MvvmGenerator.Core.Templates.Models;
 using Olf.MvvmGenerator.Foundation.Models;
 using Olf.MvvmGenerator.Foundation.Services.CsFileInfoBuilders;
 using Olf.MvvmGenerator.Foundation.Services.Generators;
+using ModelInterfaceTemplate = Olf.MvvmGenerator.Core.Templates.Models.ModelInterfaceTemplate;
+using ModelTemplate = Olf.MvvmGenerator.Core.Templates.Models.ModelTemplate;
 
 namespace Olf.MvvmGenerator.Core.Services.Generators
 {

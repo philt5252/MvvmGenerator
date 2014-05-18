@@ -1,17 +1,17 @@
 ﻿using Olf.MvvmGenerator.Core.Services.Generators;
 using Olf.MvvmGenerator.Foundation.Templates;
 
-namespace Olf.MvvmGenerator.Core.Templates
+namespace Olf.MvvmGenerator.Core.Templates.Models
 {
-    public partial class ViewModelFactoryTemplate : IFileTemplate
+    public partial class ModelFactoryInterfaceTemplate : IFileTemplate
     {
         protected readonly CsFileInfo csFileInfo;
         protected readonly string interfaceObjectName;
 
-        public ViewModelFactoryTemplate(CsFileInfo csFileInfo)
+        public ModelFactoryInterfaceTemplate(CsFileInfo csFileInfo)
         {
             this.csFileInfo = csFileInfo;
-            interfaceObjectName = "I" + csFileInfo.ObjectName.Replace("Factory", "");
+            interfaceObjectName = csFileInfo.ObjectName.Replace("Factory", "");
         }
     }
 }

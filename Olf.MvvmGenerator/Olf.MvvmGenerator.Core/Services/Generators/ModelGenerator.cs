@@ -20,7 +20,7 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
             
         }
 
-        public void Run(ParsedModelCommand parsedModelCommand)
+        public void Run(ParsedCommandWithProperties parsedModelCommand)
         {
             List<FilePreview> filePreviews = new List<FilePreview>();
 

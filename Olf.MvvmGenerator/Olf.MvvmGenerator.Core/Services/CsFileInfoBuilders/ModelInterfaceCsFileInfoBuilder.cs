@@ -4,9 +4,9 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ModelInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedModelCommand>
+    public class ModelInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
-        public ModelInterfaceCsFileInfoBuilder(ParsedModelCommand parsedCommand, IVisualStudioIde visualStudioIde)
+        public ModelInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde)
             : base(parsedCommand, visualStudioIde)
         {
         }
@@ -19,12 +19,12 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
             return projectName;
         }
 
-        protected override string CreateObjectName(ParsedModelCommand parsedCommand)
+        protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
             return "I" + parsedCommand.ObjectName;
         }
 
-        protected override string CreateFilePath(ParsedModelCommand parsedCommand)
+        protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)
         {
             return string.Format("Models\\{0}", CsFileInfo.FileName);
         }

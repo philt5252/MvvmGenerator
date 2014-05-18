@@ -1,0 +1,30 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Olf.MvvmGenerator.Foundation.Models" #>
+
+<# foreach(string u in csFileInfo.Usings)
+    {
+        WriteLine("using " + u + ";");
+    }
+#>
+
+namespace <# WriteLine(csFileInfo.Namespace); #>
+{
+    public class <# WriteLine(csFileInfo.ObjectDeclaration); #>
+    {
+        protected <# Write(interfaceModelName); #> model;
+
+<# foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+    {#>
+        public <#        Write(propertyDetails.PropertyType.Name); #> <#        Write(propertyDetails.PropertyName);#> 
+        { 
+            get { return model.<#Write(propertyDetails.PropertyName); #>; }
+            set { model.<#Write(propertyDetails.PropertyName); #> = value; }
+        }
+
+<#  }   #>
+        public <#Write(csFileInfo.ObjectName); #>(<#Write(interfaceModelName);#> model)
+        {
+            this.model = moodel;
+        }
+    }
+}

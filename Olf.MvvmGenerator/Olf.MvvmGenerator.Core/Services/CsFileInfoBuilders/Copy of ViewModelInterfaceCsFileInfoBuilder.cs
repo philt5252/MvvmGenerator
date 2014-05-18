@@ -4,9 +4,9 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ViewModelInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
+    public class ScaffoldViewModelInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
-        public ViewModelInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde)
+        public ScaffoldViewModelInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde)
             : base(parsedCommand, visualStudioIde)
         {
         }
@@ -21,7 +21,7 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 
         protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
-            return "I" + parsedCommand.ObjectName;
+            return "I" + parsedCommand.ObjectName + "ViewModel";
         }
 
         protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)

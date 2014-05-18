@@ -5,15 +5,15 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ModelFactoryInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
+    public class ScaffoldViewModelFactoryInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
-        private readonly CsFileInfo modelInterfaceCsFileInfo;
+        private readonly CsFileInfo viewModelInterfaceCsFileInfo;
 
-        public ModelFactoryInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde, 
-            CsFileInfo modelInterfaceCsFileInfo) 
+        public ScaffoldViewModelFactoryInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde,
+            CsFileInfo viewModelInterfaceCsFileInfo) 
             : base(parsedCommand, visualStudioIde)
         {
-            this.modelInterfaceCsFileInfo = modelInterfaceCsFileInfo;
+            this.viewModelInterfaceCsFileInfo = viewModelInterfaceCsFileInfo;
         }
 
         protected override string CreateProjectName(string[] projectNames)
@@ -31,19 +31,19 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 
         protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
-            return "I" + parsedCommand.ObjectName + "Factory";
+            return "I" + parsedCommand.ObjectName + "ViewModelFactory";
         }
 
         protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)
         {
-            return string.Format("Factories\\Models\\{0}", CsFileInfo.FileName);
+            return string.Format("Factories\\ViewModels\\{0}", CsFileInfo.FileName);
         }
 
         public override void CreateUsings()
         {
             base.CreateUsings();
 
-            CsFileInfo.Usings.Add(modelInterfaceCsFileInfo.Namespace);
+            CsFileInfo.Usings.Add(viewModelInterfaceCsFileInfo.Namespace);
         }
     }
 }

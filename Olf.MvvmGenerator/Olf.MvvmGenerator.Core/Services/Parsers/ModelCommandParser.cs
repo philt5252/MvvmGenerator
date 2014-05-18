@@ -30,10 +30,10 @@ namespace Olf.MvvmGenerator.Core.Services.Parsers
             return true;
         }
 
-        public ParsedModelCommand Parse(string command)
+        public ParsedCommandWithProperties Parse(string command)
         {
             String[] parsedCommand = command.Split(' ');
-            ParsedModelCommand parsedModelCommand = new ParsedModelCommand();
+            ParsedCommandWithProperties parsedModelCommand = new ParsedCommandWithProperties();
             parsedModelCommand.Command = parsedCommand[0];
             parsedModelCommand.ObjectName = parsedCommand[1];
 

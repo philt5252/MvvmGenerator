@@ -4,6 +4,6 @@ namespace Olf.MvvmGenerator.Foundation.Services.Generators
 {
     public interface IScaffoldGenerator
     {
-        void Run(ParsedScaffoldCommand parsedModelCommand);
+        void Run(ParsedCommandWithProperties parsedModelCommand);
     }
 }

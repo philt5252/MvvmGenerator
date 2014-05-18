@@ -4,6 +4,6 @@ namespace Olf.MvvmGenerator.Foundation.Services.Generators
 {
     public interface IModelGenerator
     {
-        void Run(ParsedModelCommand parsedModelCommand);
+        void Run(ParsedCommandWithProperties parsedModelCommand);
     }
 }

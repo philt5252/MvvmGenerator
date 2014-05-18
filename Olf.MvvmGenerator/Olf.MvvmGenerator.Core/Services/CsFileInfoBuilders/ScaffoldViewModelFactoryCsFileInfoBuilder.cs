@@ -5,20 +5,22 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ViewModelFactoryInterfaceCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
+    public class ScaffoldViewModelFactoryCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
-        private readonly CsFileInfo viewModelInterfaceCsFileInfo;
+          private readonly CsFileInfo viewModelInterfaceCsFileInfo;
+          private readonly CsFileInfo viewModelFactoryInterfaceCsFileInfo;
 
-        public ViewModelFactoryInterfaceCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde,
-            CsFileInfo viewModelInterfaceCsFileInfo) 
+          public ScaffoldViewModelFactoryCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde,
+            CsFileInfo viewModelInterfaceCsFileInfo, CsFileInfo viewModelFactoryInterfaceCsFileInfo) 
             : base(parsedCommand, visualStudioIde)
         {
             this.viewModelInterfaceCsFileInfo = viewModelInterfaceCsFileInfo;
+            this.viewModelFactoryInterfaceCsFileInfo = viewModelFactoryInterfaceCsFileInfo;
         }
 
         protected override string CreateProjectName(string[] projectNames)
         {
-            string projectName = projectNames.FirstOrDefault(p => p.EndsWith(".Foundation"));
+            string projectName = projectNames.FirstOrDefault(p => p.EndsWith(".Core"));
             projectName = projectName ?? projectNames.First();
 
             return projectName;
@@ -31,7 +33,7 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 
         protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
-            return "I" + parsedCommand.ObjectName + "Factory";
+            return parsedCommand.ObjectName + "ViewModelFactory";
         }
 
         protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)
@@ -44,6 +46,14 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
             base.CreateUsings();
 
             CsFileInfo.Usings.Add(viewModelInterfaceCsFileInfo.Namespace);
+            CsFileInfo.Usings.Add(viewModelFactoryInterfaceCsFileInfo.Namespace);
+
+            CsFileInfo.Usings = CsFileInfo.Usings.Distinct().ToList();
+        }
+
+        public override void CreateBaseClass()
+        {
+            CsFileInfo.BaseClass = viewModelFactoryInterfaceCsFileInfo.ObjectName;
         }
     }
 }

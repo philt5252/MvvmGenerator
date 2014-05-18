@@ -2,6 +2,7 @@
 using Olf.Common.VisualStudio;
 using Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders;
 using Olf.MvvmGenerator.Core.Templates.Models;
+using Olf.MvvmGenerator.Core.Templates.ViewModels;
 using Olf.MvvmGenerator.Foundation.Models;
 using Olf.MvvmGenerator.Foundation.Services.CsFileInfoBuilders;
 using Olf.MvvmGenerator.Foundation.Services.Generators;
@@ -17,25 +18,25 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
         {
         }
 
-        public void Run(ParsedViewModelCommand parsedViewModelCommand)
+        public void Run(ParsedCommandWithProperties parsedViewModelCommand)
         {
             List<FilePreview> filePreviews = new List<FilePreview>();
 
             ICsFileInfoBuilder viewModelInterfaceCsFileInfoBuilder = new ViewModelInterfaceCsFileInfoBuilder(parsedViewModelCommand, visualStudioIde);
             CsFileInfo viewModelInterfaceCsFileInfo = CreateCsFileInfo(viewModelInterfaceCsFileInfoBuilder);
-            var viewModelInterfaceCodeFilePreview = CreateFilePreview(viewModelInterfaceCsFileInfo, new ModelInterfaceTemplate(viewModelInterfaceCsFileInfo));
+            var viewModelInterfaceCodeFilePreview = CreateFilePreview(viewModelInterfaceCsFileInfo, new ViewModelInterfaceTemplate(viewModelInterfaceCsFileInfo));
 
             ICsFileInfoBuilder viewModelCsFileInfoBuilder = new ViewModelCsFileInfoBuilder(parsedViewModelCommand, visualStudioIde, viewModelInterfaceCsFileInfo);
             CsFileInfo viewModelCsFileInfo = CreateCsFileInfo(viewModelCsFileInfoBuilder);
-            var viewModelCodeFilePreview = CreateFilePreview(viewModelCsFileInfo, new ModelTemplate(viewModelCsFileInfo));
+            var viewModelCodeFilePreview = CreateFilePreview(viewModelCsFileInfo, new ViewModelTemplate(viewModelCsFileInfo));
 
             ICsFileInfoBuilder viewModelFactoryInterfaceCsFileInfoBuilder = new ViewModelFactoryInterfaceCsFileInfoBuilder(parsedViewModelCommand, visualStudioIde, viewModelInterfaceCsFileInfo);
             CsFileInfo viewModelFactoryInterfaceCsFileInfo = CreateCsFileInfo(viewModelFactoryInterfaceCsFileInfoBuilder);
-            var viewModelFactoryInterfaceCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ModelFactoryInterfaceTemplate(viewModelFactoryInterfaceCsFileInfo));
+            var viewModelFactoryInterfaceCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ViewModelFactoryInterfaceTemplate(viewModelFactoryInterfaceCsFileInfo));
 
             ICsFileInfoBuilder viewModelFactoryCsFileInfoBuilder = new ViewModelFactoryCsFileInfoBuilder(parsedViewModelCommand, visualStudioIde, viewModelInterfaceCsFileInfo, viewModelFactoryInterfaceCsFileInfo);
             CsFileInfo viewModelFactoryCsFileInfo = CreateCsFileInfo(viewModelFactoryCsFileInfoBuilder);
-            var viewModelFactoryCodeFilePreview = CreateFilePreview(viewModelFactoryCsFileInfo, new ModelFactoryTemplate(viewModelFactoryCsFileInfo));
+            var viewModelFactoryCodeFilePreview = CreateFilePreview(viewModelFactoryCsFileInfo, new ViewModelFactoryTemplate(viewModelFactoryCsFileInfo));
 
             filePreviews.Add(viewModelInterfaceCodeFilePreview);
             filePreviews.Add(viewModelCodeFilePreview);

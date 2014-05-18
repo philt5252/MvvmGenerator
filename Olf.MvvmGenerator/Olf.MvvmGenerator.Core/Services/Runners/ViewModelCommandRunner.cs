@@ -24,7 +24,7 @@ namespace Olf.MvvmGenerator.Core.Services.Runners
 
         public void Execute(string command)
         {
-            ParsedViewModelCommand parsedViewModelCommand = viewModelCommandParser.Parse(command);
+            ParsedCommandWithProperties parsedViewModelCommand = viewModelCommandParser.Parse(command);
 
             viewModelGenerator.Run(parsedViewModelCommand);
         }

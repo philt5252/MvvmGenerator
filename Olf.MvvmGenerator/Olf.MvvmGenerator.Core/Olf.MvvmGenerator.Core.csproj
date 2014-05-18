@@ -60,6 +60,10 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Factories\ViewModels\GenerateCommandViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewModelCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewModelFactoryCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewModelFactoryInterfaceCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\Copy of ViewModelInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\CsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\CsFileInfoDirector.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ModelCsFileInfoBuilder.cs" />
@@ -86,6 +90,80 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\Partials\ScaffoldViewModelTemplate.cs" />
+    <Compile Include="Templates\Scaffold\Partials\ScaffoldViewModelInterfaceTemplate.cs" />
+    <Compile Include="Templates\Scaffold\Partials\ScaffoldViewModelFactoryTemplate.cs" />
+    <Compile Include="Templates\Scaffold\Partials\ScaffoldViewModelFactoryInterfaceTemplate.cs" />
+    <Compile Include="Templates\Scaffold\ScaffoldControllerInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldControllerInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldControllerTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldListViewModelFactoryInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldListViewModelFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldListViewModelFactoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldListViewModelFactoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldListViewModelInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldListViewModelInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldListViewModelTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldListViewModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewCsTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewCsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewFactoryInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewFactoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewFactoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewModelFactoryInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewModelFactoryInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewModelFactoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewModelFactoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewModelInterfaceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewModelInterfaceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewModelTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewModelTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Scaffold\ScaffoldViewXamlTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldViewXamlTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryTemplatePartial.cs" />
     <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryInterfaceTemplatePartial.cs" />
@@ -166,6 +244,62 @@
     <None Include="Templates\Models\ModelTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ModelTemplate1.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldControllerInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldControllerInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldControllerTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldListViewModelFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldListViewModelFactoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldListViewModelFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldListViewModelFactoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldListViewModelInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldListViewModelInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldListViewModelTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldListViewModelTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewCsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewCsTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewFactoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewFactoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewModelFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewModelFactoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewModelFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewModelFactoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewModelInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewModelInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewModelTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewModelTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Scaffold\ScaffoldViewXamlTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScaffoldViewXamlTemplate.cs</LastGenOutput>
     </None>
     <None Include="Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

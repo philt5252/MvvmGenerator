@@ -24,7 +24,7 @@ namespace Olf.MvvmGenerator.Core.Services.Runners
 
         public void Execute(string command)
         {
-            ParsedScaffoldCommand parsedScaffoldCommand = scaffoldCommandParser.Parse(command);
+            ParsedCommandWithProperties parsedScaffoldCommand = scaffoldCommandParser.Parse(command);
 
             scaffoldGenerator.Run(parsedScaffoldCommand);
         }

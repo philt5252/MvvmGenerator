@@ -5,12 +5,12 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ModelFactoryCsFileInfoBuilder : CsFileInfoBuilder<ParsedModelCommand>
+    public class ModelFactoryCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
         private readonly CsFileInfo modelInterfaceCsFileInfo;
         private readonly CsFileInfo modelFactoryInterfaceCsFileInfo;
 
-        public ModelFactoryCsFileInfoBuilder(ParsedModelCommand parsedCommand, IVisualStudioIde visualStudioIde, 
+        public ModelFactoryCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde, 
             CsFileInfo modelInterfaceCsFileInfo, CsFileInfo modelFactoryInterfaceCsFileInfo) 
             : base(parsedCommand, visualStudioIde)
         {
@@ -31,12 +31,12 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
             //base.CreateProperties();
         }
 
-        protected override string CreateObjectName(ParsedModelCommand parsedCommand)
+        protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
             return parsedCommand.ObjectName + "Factory";
         }
 
-        protected override string CreateFilePath(ParsedModelCommand parsedCommand)
+        protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)
         {
             return string.Format("Factories\\Models\\{0}", CsFileInfo.FileName);
         }

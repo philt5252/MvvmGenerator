@@ -6,16 +6,16 @@ using Olf.MvvmGenerator.Foundation.Services.Parsers;
 
 namespace Olf.MvvmGenerator.Core.Services.Parsers
 {
-    public class ModelCommandParser : IModelCommandParser
+    public class ViewModelCommandParser : IViewModelCommandParser
     {
         private PropertyDetailsParser propertyDetailsParser;
-        public ModelCommandParser()
+        public ViewModelCommandParser()
         {
             propertyDetailsParser = new PropertyDetailsParser();
         }
         public bool CheckValidCommand(string command)
         {
-            if (command.StartsWith("Model"))
+            if (command.StartsWith("ViewModel"))
             {
                 return false;
             }
@@ -28,12 +28,13 @@ namespace Olf.MvvmGenerator.Core.Services.Parsers
                 return false;
             }
             return true;
+
         }
 
-        public ParsedModelCommand Parse(string command)
+        public ParsedViewModelCommand Parse(string command)
         {
             String[] parsedCommand = command.Split(' ');
-            ParsedModelCommand parsedModelCommand = new ParsedModelCommand();
+            ParsedViewModelCommand parsedModelCommand = new ParsedViewModelCommand();
             parsedModelCommand.Command = parsedCommand[0];
             parsedModelCommand.ObjectName = parsedCommand[1];
 
@@ -43,7 +44,5 @@ namespace Olf.MvvmGenerator.Core.Services.Parsers
 
             return parsedModelCommand;
         }
-
-        
     }
 }

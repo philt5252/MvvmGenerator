@@ -7,7 +7,7 @@
     <Grid>
 
         <StackPanel>
-            <TextBox AcceptsReturn="true" TextWrapping="Wrap" Height ="Auto" Text="{Binding Command, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" 
+            <TextBox AcceptsReturn="false" TextWrapping="Wrap" Height ="Auto" Text="{Binding Command, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" 
                      Margin="82,10,0,0" VerticalAlignment="Top" Width="329"/>
             <Button  IsDefault="True" Command="{Binding GenerateCommand}" Content="Generate" HorizontalAlignment="Left" 
                     Margin="337,6,0,0" VerticalAlignment="Top" Width="75"/> 

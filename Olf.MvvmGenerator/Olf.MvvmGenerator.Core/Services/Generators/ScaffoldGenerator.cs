@@ -55,7 +55,11 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
 
             ICsFileInfoBuilder viewCsFileInfoBuilder = new ScaffoldViewCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
             CsFileInfo viewCsFileInfo = CreateCsFileInfo(viewCsFileInfoBuilder);
-            var viewCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ScaffoldViewCsTemplate(viewCsFileInfo));
+            var viewCodeFilePreview = CreateFilePreview(viewCsFileInfo, new ScaffoldViewCsTemplate(viewCsFileInfo));
+
+            ICsFileInfoBuilder viewXamlFileInfoBuilder = new ScaffoldViewXamlFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
+            CsFileInfo viewXamlCsFileInfo = CreateCsFileInfo(viewXamlFileInfoBuilder);
+            var viewXamlCodeFilePreview = CreateFilePreview(viewXamlCsFileInfo, new ScaffoldViewXamlTemplate(viewXamlCsFileInfo));
 
             ICsFileInfoBuilder viewFactoryInterfaceCsFileInfoBuilder = new ScaffoldViewFactoryInterfaceCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
             CsFileInfo viewFactoryInterfaceCsFileInfo = CreateCsFileInfo(viewFactoryInterfaceCsFileInfoBuilder);
@@ -79,6 +83,7 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
             filePreviews.Add(viewFactoryCodeFilePreview);
 
             filePreviews.Add(viewCodeFilePreview);
+            filePreviews.Add(viewXamlCodeFilePreview);
 
             foreach (var filePreview in filePreviews)
             {

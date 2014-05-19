@@ -9,9 +9,7 @@
 // ------------------------------------------------------------------------------
 namespace Olf.MvvmGenerator.Core.Templates.Scaffold
 {
-    using System.Linq;
-    using System.Text;
-    using System.Collections.Generic;
+    using Olf.MvvmGenerator.Foundation.Models;
     using System;
     
     /// <summary>
@@ -27,6 +25,61 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
         /// </summary>
         public virtual string TransformText()
         {
+            this.Write("\r\n<UserControl x:Class=\"");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+Write(csFileInfo.Namespace);
+            
+            #line default
+            #line hidden
+            this.Write(".");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+ Write(csFileInfo.ObjectName);
+            
+            #line default
+            #line hidden
+            this.Write(@"""
+             xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+             xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""
+             xmlns:mc=""http://schemas.openxmlformats.org/markup-compatibility/2006"" 
+             xmlns:d=""http://schemas.microsoft.com/expression/blend/2008"" 
+             mc:Ignorable=""d"" 
+             d:DesignHeight=""300"" d:DesignWidth=""300"">
+    <Grid>
+	    <StackPanel>
+");
+            
+            #line 13 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+  foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+    {
+            
+            #line default
+            #line hidden
+            this.Write("            <WrapPanel Margin=\"0,0,0,5\">\r\n                <Label Width=\"100\" Cont" +
+                    "ent=\"");
+            
+            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+ Write(propertyDetails.PropertyName);
+            
+            #line default
+            #line hidden
+            this.Write("\"></Label>\r\n                <TextBox Width=\"150\" Text=\"{Binding ");
+            
+            #line 17 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+ Write(propertyDetails.PropertyName);
+            
+            #line default
+            #line hidden
+            this.Write(", UpdateSourceTrigger=PropertyChanged\"></TextBox>\r\n            </WrapPanel>\r\n");
+            
+            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldViewXamlTemplate.tt"
+  }   
+            
+            #line default
+            #line hidden
+            this.Write("            <Button Content=\"Save\"  Width=\"75\" Margin=\"175,0,50,0\"/>\r\n        </S" +
+                    "tackPanel>\r\n    </Grid>\r\n</UserControl>");
             return this.GenerationEnvironment.ToString();
         }
     }

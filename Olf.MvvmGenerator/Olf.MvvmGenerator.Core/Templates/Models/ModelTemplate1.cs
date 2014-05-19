@@ -53,30 +53,28 @@ namespace Olf.MvvmGenerator.Core.Templates.Models
             this.Write("    {\r\n");
             
             #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
-
-    foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+  foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
     {
-
             
             #line default
             #line hidden
             this.Write("        public ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
+            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
         Write(propertyDetails.PropertyType.Name); 
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 18 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
+            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
         Write(propertyDetails.PropertyName);
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 19 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
+            #line 17 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Models\ModelTemplate.tt"
   }   
             
             #line default

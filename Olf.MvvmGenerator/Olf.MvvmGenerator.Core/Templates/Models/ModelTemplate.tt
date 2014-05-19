@@ -11,10 +11,8 @@ namespace <# WriteLine(csFileInfo.Namespace); #>
 {
     public class <# WriteLine(csFileInfo.ObjectDeclaration); #>
     {
-<#
-    foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
-    {
-#>
+<#  foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+    {#>
         public <#        Write(propertyDetails.PropertyType.Name); #> <#        Write(propertyDetails.PropertyName);#> { get; set; }
 <#  }   #>
     }

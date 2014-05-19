@@ -41,7 +41,12 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 
             string dottedPath = CsFileInfo.FilePath.Replace(".", "").Replace('\\', '.');
 
-            CsFileInfo.Namespace = projectNamespace + "." + dottedPath.Substring(0, dottedPath.LastIndexOf('.'));
+            int lastIndexOfDot = dottedPath.LastIndexOf('.');
+
+            CsFileInfo.Namespace = projectNamespace;
+
+            if(lastIndexOfDot >= 0)
+                CsFileInfo.Namespace += "." + dottedPath.Substring(0, lastIndexOfDot);
         }
 
         public void CreateObjectName()

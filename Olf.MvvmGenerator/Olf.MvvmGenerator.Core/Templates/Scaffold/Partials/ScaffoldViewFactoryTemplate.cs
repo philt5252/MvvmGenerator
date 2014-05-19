@@ -9,10 +9,13 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
         protected readonly CsFileInfo csFileInfo;
         protected string viewName;
 
-        public ScaffoldViewFactoryTemplate(CsFileInfo csFileInfo)
+        public ScaffoldViewFactoryTemplate(CsFileInfo csFileInfo, CsFileInfo viewCsFileInfo)
         {
             this.csFileInfo = csFileInfo;
-            viewName = csFileInfo.ObjectName.Replace("Factory", "");
+            viewName = viewCsFileInfo.ObjectName;
+
+            if (!csFileInfo.Usings.Contains(viewCsFileInfo.Namespace))
+                csFileInfo.Usings.Add(viewCsFileInfo.Namespace);
         }
     }
 }

@@ -53,13 +53,17 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
             CsFileInfo viewModelFactoryCsFileInfo = CreateCsFileInfo(viewModelFactoryCsFileInfoBuilder);
             var viewModelFactoryCodeFilePreview = CreateFilePreview(viewModelFactoryCsFileInfo, new ScaffoldViewModelFactoryTemplate(viewModelFactoryCsFileInfo, modelInterfaceCsFileInfo));
 
+            ICsFileInfoBuilder viewCsFileInfoBuilder = new ScaffoldViewCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
+            CsFileInfo viewCsFileInfo = CreateCsFileInfo(viewCsFileInfoBuilder);
+            var viewCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ScaffoldViewCsTemplate(viewCsFileInfo));
+
             ICsFileInfoBuilder viewFactoryInterfaceCsFileInfoBuilder = new ScaffoldViewFactoryInterfaceCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
             CsFileInfo viewFactoryInterfaceCsFileInfo = CreateCsFileInfo(viewFactoryInterfaceCsFileInfoBuilder);
             var viewFactoryInterfaceCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ScaffoldViewFactoryInterfaceTemplate(viewFactoryInterfaceCsFileInfo));
 
             ICsFileInfoBuilder viewFactoryCsFileInfoBuilder = new ScaffoldViewFactoryCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde, viewFactoryInterfaceCsFileInfo);
             CsFileInfo viewFactoryCsFileInfo = CreateCsFileInfo(viewFactoryCsFileInfoBuilder);
-            var viewFactoryCodeFilePreview = CreateFilePreview(viewModelFactoryCsFileInfo, new ScaffoldViewFactoryTemplate(viewFactoryCsFileInfo));
+            var viewFactoryCodeFilePreview = CreateFilePreview(viewModelFactoryCsFileInfo, new ScaffoldViewFactoryTemplate(viewFactoryCsFileInfo, viewCsFileInfo));
 
             filePreviews.Add(modelInterfaceCodeFilePreview);
             filePreviews.Add(modelCodeFilePreview);
@@ -73,6 +77,8 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
 
             filePreviews.Add(viewFactoryInterfaceCodeFilePreview);
             filePreviews.Add(viewFactoryCodeFilePreview);
+
+            filePreviews.Add(viewCodeFilePreview);
 
             foreach (var filePreview in filePreviews)
             {

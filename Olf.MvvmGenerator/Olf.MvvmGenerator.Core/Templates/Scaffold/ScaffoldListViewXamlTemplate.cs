@@ -9,9 +9,7 @@
 // ------------------------------------------------------------------------------
 namespace Olf.MvvmGenerator.Core.Templates.Scaffold
 {
-    using System.Linq;
-    using System.Text;
-    using System.Collections.Generic;
+    using Olf.MvvmGenerator.Foundation.Models;
     using System;
     
     /// <summary>
@@ -27,6 +25,81 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
         /// </summary>
         public virtual string TransformText()
         {
+            this.Write("\r\n<UserControl x:Class=\"");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+Write(csFileInfo.Namespace);
+            
+            #line default
+            #line hidden
+            this.Write(".");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+ Write(csFileInfo.ObjectName);
+            
+            #line default
+            #line hidden
+            this.Write(@"""
+             xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+             xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""
+             xmlns:mc=""http://schemas.openxmlformats.org/markup-compatibility/2006"" 
+             xmlns:d=""http://schemas.microsoft.com/expression/blend/2008"" 
+             mc:Ignorable=""d"" 
+             d:DesignHeight=""300"" d:DesignWidth=""300"">
+    <Grid>
+        <DataGrid ItemsSource=""{Binding ");
+            
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+ Write(itemsName);
+            
+            #line default
+            #line hidden
+            this.Write("}\" SelectedItem=\"{Binding  ");
+            
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+ Write(selectedItemsName);
+            
+            #line default
+            #line hidden
+            this.Write("}\" HorizontalAlignment=\"Left\" VerticalAlignment=\"Top\" Height=\"270\" Width=\"300\" Ma" +
+                    "rgin=\"0,30,0,0\">\r\n            <DataGrid.Columns>\r\n");
+            
+            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+  foreach(PropertyDetails propertyDetails in csFileInfo.Properties)
+{
+            
+            #line default
+            #line hidden
+            this.Write("                <DataGridTextColumn Header=\"");
+            
+            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+ Write(propertyDetails.PropertyName);
+            
+            #line default
+            #line hidden
+            this.Write("\" Binding=\"{Binding ");
+            
+            #line 16 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+ Write(propertyDetails.PropertyName);
+            
+            #line default
+            #line hidden
+            this.Write("}\"></DataGridTextColumn> \r\n");
+            
+            #line 17 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewXamlTemplate.tt"
+  }   
+            
+            #line default
+            #line hidden
+            this.Write(@"            </DataGrid.Columns>
+            <Button Content=""Add"" Command=""{Binding AddCommand}"" HorizontalAlignment=""Left"" Margin=""3,0,0,0"" VerticalAlignment=""Top"" Width=""75""/>
+            <Button Content=""Modify"" Command=""{Binding ModifyCommand}"" HorizontalAlignment=""Left"" Margin=""83,0,0,0"" VerticalAlignment=""Top"" Width=""75""/>
+            <Button Content=""Delete"" Command=""{Binding DeleteCommand}"" HorizontalAlignment=""Left"" Margin=""163,0,0,0"" VerticalAlignment=""Top"" Width=""75""/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
+");
             return this.GenerationEnvironment.ToString();
         }
     }

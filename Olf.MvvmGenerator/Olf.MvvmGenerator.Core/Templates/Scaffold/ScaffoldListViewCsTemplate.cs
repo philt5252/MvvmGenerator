@@ -9,9 +9,7 @@
 // ------------------------------------------------------------------------------
 namespace Olf.MvvmGenerator.Core.Templates.Scaffold
 {
-    using System.Linq;
-    using System.Text;
-    using System.Collections.Generic;
+    using Olf.MvvmGenerator.Foundation.Models;
     using System;
     
     /// <summary>
@@ -27,6 +25,39 @@ namespace Olf.MvvmGenerator.Core.Templates.Scaffold
         /// </summary>
         public virtual string TransformText()
         {
+            this.Write("using System.Windows.Controls;\r\n");
+            
+            #line 4 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewCsTemplate.tt"
+ foreach(string u in csFileInfo.Usings)
+    {
+        WriteLine("using " + u + ";");
+    }
+
+            
+            #line default
+            #line hidden
+            this.Write("\r\nnamespace ");
+            
+            #line 10 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewCsTemplate.tt"
+ WriteLine(csFileInfo.Namespace); 
+            
+            #line default
+            #line hidden
+            this.Write("{\r\n    public partial class ");
+            
+            #line 12 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewCsTemplate.tt"
+ Write(csFileInfo.ObjectDeclaration); 
+            
+            #line default
+            #line hidden
+            this.Write(" : UserControl\r\n    {\r\n        public ");
+            
+            #line 14 "C:\Users\Phil\Desktop\MvvmGenerator\Olf.MvvmGenerator\Olf.MvvmGenerator.Core\Templates\Scaffold\ScaffoldListViewCsTemplate.tt"
+ Write(csFileInfo.ObjectDeclaration); 
+            
+            #line default
+            #line hidden
+            this.Write("()\r\n        {\r\n            InitializeComponent();\r\n        }\r\n    }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

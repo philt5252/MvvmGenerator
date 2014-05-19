@@ -78,8 +78,8 @@ Write(csFileInfo.Namespace);
             
             #line default
             #line hidden
-            this.Write("            <Button Content=\"Save\"  Width=\"75\" Margin=\"175,0,50,0\"/>\r\n        </S" +
-                    "tackPanel>\r\n    </Grid>\r\n</UserControl>");
+            this.Write("            <Button Content=\"Save\" Command={Binding SaveCommand} Width=\"75\" Margi" +
+                    "n=\"175,0,50,0\"/>\r\n        </StackPanel>\r\n    </Grid>\r\n</UserControl>");
             return this.GenerationEnvironment.ToString();
         }
     }

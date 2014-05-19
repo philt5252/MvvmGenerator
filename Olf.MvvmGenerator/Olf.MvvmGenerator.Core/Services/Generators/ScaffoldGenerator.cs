@@ -61,6 +61,15 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
             CsFileInfo viewXamlCsFileInfo = CreateCsFileInfo(viewXamlFileInfoBuilder);
             var viewXamlCodeFilePreview = CreateFilePreview(viewXamlCsFileInfo, new ScaffoldViewXamlTemplate(viewXamlCsFileInfo));
 
+            ICsFileInfoBuilder listViewCsFileInfoBuilder = new ScaffoldListViewCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
+            CsFileInfo listViewCsFileInfo = CreateCsFileInfo(listViewCsFileInfoBuilder);
+            var listViewCsCodeFilePreview = CreateFilePreview(viewXamlCsFileInfo, new ScaffoldListViewCsTemplate(listViewCsFileInfo));
+
+            ICsFileInfoBuilder listViewXamlFileInfoBuilder = new ScaffoldListViewXamlFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
+            CsFileInfo listViewXamlCsFileInfo = CreateCsFileInfo(listViewXamlFileInfoBuilder);
+            var listViewXamlCodeFilePreview = CreateFilePreview(viewXamlCsFileInfo, new ScaffoldListViewXamlTemplate(listViewXamlCsFileInfo, modelCsFileInfo));
+
+
             ICsFileInfoBuilder viewFactoryInterfaceCsFileInfoBuilder = new ScaffoldViewFactoryInterfaceCsFileInfoBuilder(parsedScaffoldCommand, visualStudioIde);
             CsFileInfo viewFactoryInterfaceCsFileInfo = CreateCsFileInfo(viewFactoryInterfaceCsFileInfoBuilder);
             var viewFactoryInterfaceCodeFilePreview = CreateFilePreview(viewModelFactoryInterfaceCsFileInfo, new ScaffoldViewFactoryInterfaceTemplate(viewFactoryInterfaceCsFileInfo));
@@ -84,6 +93,9 @@ namespace Olf.MvvmGenerator.Core.Services.Generators
 
             filePreviews.Add(viewCodeFilePreview);
             filePreviews.Add(viewXamlCodeFilePreview);
+
+            filePreviews.Add(listViewCsCodeFilePreview);
+            filePreviews.Add(listViewXamlCodeFilePreview);
 
             foreach (var filePreview in filePreviews)
             {

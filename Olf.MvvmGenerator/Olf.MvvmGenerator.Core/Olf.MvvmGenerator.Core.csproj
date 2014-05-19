@@ -60,6 +60,8 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Factories\ViewModels\GenerateCommandViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ScaffoldListViewCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ScaffoldListViewXamlFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewXamlFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ScaffoldViewFactoryCsFileInfoBuilder.cs" />
@@ -95,6 +97,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelFactoryInterfaceTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Include="Templates\Scaffold\Partials\Copy of ScaffoldViewCsTemplate.cs" />
+    <Compile Include="Templates\Scaffold\Partials\ScaffoldListViewXamlTemplate.cs" />
     <Compile Include="Templates\Scaffold\Partials\ScaffoldViewXamlTemplate.cs" />
     <Compile Include="Templates\Scaffold\Partials\ScaffoldViewCsTemplate.cs" />
     <Compile Include="Templates\Scaffold\Partials\ScaffoldViewFactoryInterfaceTemplate.cs" />

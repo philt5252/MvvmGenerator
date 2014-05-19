@@ -17,7 +17,7 @@
                 <TextBox Width="150" Text="{Binding <# Write(propertyDetails.PropertyName);#>, UpdateSourceTrigger=PropertyChanged"></TextBox>
             </WrapPanel>
 <#  }   #>
-            <Button Content="Save"  Width="75" Margin="175,0,50,0"/>
+            <Button Content="Save" Command={Binding SaveCommand} Width="75" Margin="175,0,50,0"/>
         </StackPanel>
     </Grid>
 </UserControl>

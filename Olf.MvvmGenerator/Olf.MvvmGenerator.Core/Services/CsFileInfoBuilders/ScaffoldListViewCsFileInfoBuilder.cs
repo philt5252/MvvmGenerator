@@ -4,12 +4,12 @@ using Olf.MvvmGenerator.Foundation.Models;
 
 namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 {
-    public class ScaffoldViewCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
+    public class ScaffoldListViewCsFileInfoBuilder : CsFileInfoBuilder<ParsedCommandWithProperties>
     {
-        public ScaffoldViewCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde)
+        public ScaffoldListViewCsFileInfoBuilder(ParsedCommandWithProperties parsedCommand, IVisualStudioIde visualStudioIde)
             : base(parsedCommand, visualStudioIde)
         {
-            FileExtension = ".cs";
+            FileExtension = ".xaml.cs";
         }
 
         protected override string CreateProjectName(string[] projectNames)
@@ -22,7 +22,7 @@ namespace Olf.MvvmGenerator.Core.Services.CsFileInfoBuilders
 
         protected override string CreateObjectName(ParsedCommandWithProperties parsedCommand)
         {
-            return parsedCommand.ObjectName + "View";
+            return parsedCommand.ObjectName + "ListView";
         }
 
         protected override string CreateFilePath(ParsedCommandWithProperties parsedCommand)

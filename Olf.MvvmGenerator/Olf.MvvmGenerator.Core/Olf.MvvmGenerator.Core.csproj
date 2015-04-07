@@ -76,6 +76,8 @@
     <Compile Include="Services\CsFileInfoBuilders\ModelFactoryCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ModelFactoryInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ModelInterfaceCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewFactoryCsFileInfoBuilder.cs" />
+    <Compile Include="Services\CsFileInfoBuilders\ViewFactoryInterfaceCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ViewModelCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ViewModelFactoryCsFileInfoBuilder.cs" />
     <Compile Include="Services\CsFileInfoBuilders\ViewModelFactoryInterfaceCsFileInfoBuilder.cs" />
@@ -83,14 +85,17 @@
     <Compile Include="Services\Generators\BaseGenerator.cs" />
     <Compile Include="Services\Generators\ModelGenerator.cs" />
     <Compile Include="Services\Generators\ScaffoldGenerator.cs" />
+    <Compile Include="Services\Generators\ViewFactoryGenerator.cs" />
     <Compile Include="Services\Generators\ViewModelGenerator.cs" />
     <Compile Include="Services\Parsers\ModelCommandParser.cs" />
     <Compile Include="Services\Parsers\PropertyDetailsParser.cs" />
     <Compile Include="Services\Parsers\ScaffoldCommandParser.cs" />
+    <Compile Include="Services\Parsers\ViewFactoryCommandParser.cs" />
     <Compile Include="Services\Parsers\ViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\CommandRunnerManager.cs" />
     <Compile Include="Services\Runners\ModelCommandRunner.cs" />
     <Compile Include="Services\Runners\ScaffoldCommandRunner.cs" />
+    <Compile Include="Services\Runners\ViewFactoryCommandRunner.cs" />
     <Compile Include="Services\Runners\ViewModelCommandRunner.cs" />
     <Compile Include="Templates\Models\ModelFactoryInterfaceTemplate1.cs">
       <AutoGen>True</AutoGen>
@@ -196,6 +201,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScaffoldViewXamlTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ViewFactory\Partials\ViewFactoryInterfaceTemplate.cs" />
+    <Compile Include="Templates\ViewFactory\Partials\ViewFactoryTemplate.cs" />
+    <Compile Include="Templates\ViewFactory\ViewFactoryInterfaceTemplate.cs">
+      <DependentUpon>ViewFactoryInterfaceTemplate.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Templates\ViewFactory\ViewFactoryTemplate.cs">
+      <DependentUpon>ViewFactoryTemplate.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryTemplatePartial.cs" />
     <Compile Include="Templates\ViewModels\Partials\ViewModelFactoryInterfaceTemplatePartial.cs" />
@@ -348,6 +365,14 @@
     <None Include="Templates\Scaffold\ScaffoldViewXamlTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ScaffoldViewXamlTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewFactory\ViewFactoryInterfaceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewFactoryInterfaceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\ViewFactory\ViewFactoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewFactoryTemplate.cs</LastGenOutput>
     </None>
     <None Include="Templates\ViewModels\ViewModelFactoryInterfaceTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

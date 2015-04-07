@@ -50,9 +50,11 @@
     <Compile Include="Services\Generators\CsFileInfo.cs" />
     <Compile Include="Services\Generators\IModelGenerator.cs" />
     <Compile Include="Services\Generators\IScaffoldGenerator.cs" />
+    <Compile Include="Services\Generators\IViewFactoryGenerator.cs" />
     <Compile Include="Services\Generators\IViewModelGenerator.cs" />
     <Compile Include="Services\Parsers\IModelCommandParser.cs" />
     <Compile Include="Services\Parsers\IScaffoldCommandParser.cs" />
+    <Compile Include="Services\Parsers\IViewFactoryCommandParser.cs" />
     <Compile Include="Services\Parsers\IViewModelCommandParser.cs" />
     <Compile Include="Services\Runners\ICommandRunner.cs" />
     <Compile Include="Services\Runners\ICommandRunnerManager.cs" />
